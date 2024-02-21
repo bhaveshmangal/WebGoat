@@ -16,7 +16,7 @@ jobs:
         with:
           url: "https://blacklock.io/api/scans/$SCAN_ID/start/"
           method: "POST"
-          headers: 'Api-Key: ${{ secrets.BLACKLOCK_API_KEY }}'
+          customHeaders: 'Api-Key: ${{ secrets.BLACKLOCK_API_KEY }}'
         env:
           SCAN_ID: ${{ secrets.SCAN_ID }}
 
