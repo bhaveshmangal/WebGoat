@@ -21,4 +21,5 @@ jobs:
           headers: 'Api-Key: ${{ secrets.API_KEY }}'
         env:
           SCAN_ID: ${{ secrets.SCAN_ID }}
+          Api-Key: ${{ secrets.API_KEY }}
 
