@@ -14,7 +14,7 @@ jobs:
       - name: Start Scan
         uses: fjogeleit/http-request-action@v1       
         with:
-          url: "https://blacklock.io/api/scans/$SCAN_ID/start/"
+          url: "https://blacklock.io/api/scans/${{ secrets.SCAN_ID }}/start/"
           method: "POST"
           customHeaders: '{ "Api-Key": "${{ secrets.BLACKLOCK_API_KEY }}" }'
         env:
