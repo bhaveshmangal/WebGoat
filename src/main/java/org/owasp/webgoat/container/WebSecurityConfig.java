@@ -57,7 +57,6 @@ public class WebSecurityConfig {
     return http.authorizeHttpRequests(
             auth ->
                 auth.requestMatchers(
-                        "/",
                         "/favicon.ico",
                         "/css/**",
                         "/images/**",
@@ -65,7 +64,8 @@ public class WebSecurityConfig {
                         "fonts/**",
                         "/plugins/**",
                         "/registration",
-                        "/register.mvc")
+                        "/register.mvc",
+                        "/actuator/**")
                     .permitAll()
                     .anyRequest()
                     .authenticated())
